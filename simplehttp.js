@@ -6,6 +6,8 @@ function easyHTTP() {
 easyHTTP.prototype.get = function(url) {
   this.http.open('GET', url, true);
 
+  this.http.onload = function() {};
+
   this.http.send();
 };
 // HTTP POST request
