@@ -3,13 +3,13 @@ function simpleHTTP() {
 }
 
 // HTTP GET request
-simpleHTTP.prototype.get = function (url) {
+simpleHTTP.prototype.get = function(url, callBack) {
   this.http.open('GET', url, true);
 
   let self = this;
-  this.http.onload = function () {
+  this.http.onload = function() {
     if (self.http.status === 200) {
-      console.log(self.http.responseText);
+      callBack(self.http.responseText);
     }
   };
 
