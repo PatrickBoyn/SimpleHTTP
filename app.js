@@ -5,5 +5,9 @@ http.get('https://jsonplaceholder.typicode.com/posts', function(
   error,
   response
 ) {
-  console.log(response);
+  if (error) {
+    console.error(error);
+  } else {
+    console.log(response);
+  }
 });
