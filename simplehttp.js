@@ -1,13 +1,13 @@
-function easyHTTP() {
+function simpleHTTP() {
   this.http = new XMLHttpRequest();
 }
 
 // HTTP GET request
-easyHTTP.prototype.get = function(url) {
+simpleHTTP.prototype.get = function (url) {
   this.http.open('GET', url, true);
 
   let self = this;
-  this.http.onload = function() {
+  this.http.onload = function () {
     if (self.http.status === 200) {
       console.log(self.http.responseText);
     }
