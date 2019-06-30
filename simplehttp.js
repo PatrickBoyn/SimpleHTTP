@@ -21,6 +21,7 @@ simpleHTTP.prototype.get = function(url, callBack) {
 // HTTP POST request
 easyHTTP.prototype.post = function(url, data, callBack) {
   this.http.open('POST', url, true);
+  this.http.setRequestHeader('Content-type', 'application/json');
 
   this.send(JSON.stringify(data));
 };
