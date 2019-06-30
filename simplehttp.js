@@ -19,7 +19,7 @@ simpleHTTP.prototype.get = function(url, callBack) {
   this.http.send();
 };
 // HTTP POST request
-
+easyHTTP.prototype.post = function(url, data) {};
 // HTTP PUT request
 
 //HTTP Delete request
