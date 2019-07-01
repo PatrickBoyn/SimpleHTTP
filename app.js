@@ -43,3 +43,14 @@ const data = {
 // });
 
 //Delete posts
+
+http.delete('https://jsonplaceholder.typicode.com/posts/1', function(
+  error,
+  posts
+) {
+  if (error) {
+    console.log(error);
+  } else {
+    console.log(posts);
+  }
+});
