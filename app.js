@@ -33,4 +33,10 @@ const data = {
 http.put('https://jsonplaceholder.typicode.com/posts/1', data, function(
   error,
   post
-) {});
+) {
+  if (error) {
+    console.log(error);
+  } else {
+    console.log(post);
+  }
+});
