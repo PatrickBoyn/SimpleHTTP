@@ -25,7 +25,7 @@ simpleHTTP.prototype.post = function(url, data, callBack) {
 
   let self = this;
   this.http.onload = function() {
-    callBack(`Error: ${self.http.responseText}`);
+    callBack(`${self.http.responseText}`);
   };
 
   this.http.send(JSON.stringify(data));
