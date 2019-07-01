@@ -29,3 +29,8 @@ const data = {
 //     console.log(post);
 //   }
 // });
+
+http.put('https://jsonplaceholder.typicode.com/posts/1', data, function(
+  error,
+  post
+) {});
