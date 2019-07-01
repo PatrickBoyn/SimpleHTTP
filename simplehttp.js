@@ -40,9 +40,10 @@ simpleHTTP.prototype.put = function(url, data, callBack) {
   let self = this;
   this.http.onload = function() {
     callBack(null, self.http.responseText);
-
-    this.http.send(JSON.stringify(data));
   };
+
+  this.http.send(JSON.stringify(data));
 };
 
 //HTTP Delete request
+simpleHTTP.prototype.delete = function(url, callBack) {};
