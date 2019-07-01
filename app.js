@@ -13,7 +13,10 @@ const http = new simpleHTTP();
 // });
 
 // POST a new post (Confusing isn't it?)
+// The post data to send
 const data = {
   title: 'Custom post',
   body: 'This a custom post'
 };
+
+http.post('https://jsonplaceholder.typicode.com/posts', data, function() {});
