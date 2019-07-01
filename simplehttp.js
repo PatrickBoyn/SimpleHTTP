@@ -46,4 +46,11 @@ simpleHTTP.prototype.put = function(url, data, callBack) {
 };
 
 //HTTP Delete request
-simpleHTTP.prototype.delete = function(url, callBack) {};
+simpleHTTP.prototype.delete = function(url, callBack) {
+  this.http.open('DELETE', url, true);
+  if (self.http.status === 200) {
+    callBack(null, self.http.responseText);
+  } else {
+    callBack(`Error: ${self.http.status}`);
+  }
+};
