@@ -18,6 +18,7 @@ simpleHTTP.prototype.get = function(url, callBack) {
 
   this.http.send();
 };
+
 // HTTP POST request
 simpleHTTP.prototype.post = function(url, data, callBack) {
   this.http.open('POST', url, true);
@@ -30,8 +31,9 @@ simpleHTTP.prototype.post = function(url, data, callBack) {
 
   this.http.send(JSON.stringify(data));
 };
+
 // HTTP PUT request
-simpleHTTP.put = function(url, data, callBack) {
+simpleHTTP.prototype.put = function(url, data, callBack) {
   this.http.open('PUT', url, true);
   this.http.setRequestHeader('Content-type', 'application/json');
 
@@ -42,4 +44,5 @@ simpleHTTP.put = function(url, data, callBack) {
     this.http.send(JSON.stringify(data));
   };
 };
+
 //HTTP Delete request
