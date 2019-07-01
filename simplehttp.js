@@ -19,13 +19,13 @@ simpleHTTP.prototype.get = function(url, callBack) {
   this.http.send();
 };
 // HTTP POST request
-easyHTTP.prototype.post = function(url, data, callBack) {
+simpleHTTP.prototype.post = function(url, data, callBack) {
   this.http.open('POST', url, true);
   this.http.setRequestHeader('Content-type', 'application/json');
 
   let self = this;
   this.http.onload = function() {
-    callBack(`Error: ${self.http.status}`);
+    callBack(`Error: ${self.http.responseText}`);
   };
 
   this.http.send(JSON.stringify(data));
