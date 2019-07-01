@@ -33,5 +33,6 @@ simpleHTTP.prototype.post = function(url, data, callBack) {
 // HTTP PUT request
 simpleHTTP.put = function(url, data, callBack) {
   this.http.open('PUT', url, true);
+  this.http.setRequestHeader('Content-type', 'application/json');
 };
 //HTTP Delete request
