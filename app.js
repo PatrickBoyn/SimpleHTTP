@@ -12,7 +12,7 @@ const http = new simpleHTTP();
 //   }
 // });
 
-// POST a new post (Confusing isn't it?)
+// Create posts
 // The post data to send
 const data = {
   title: 'Custom post',
@@ -30,13 +30,16 @@ const data = {
 //   }
 // });
 
-http.put('https://jsonplaceholder.typicode.com/posts/1', data, function(
-  error,
-  post
-) {
-  if (error) {
-    console.log(error);
-  } else {
-    console.log(post);
-  }
-});
+// Update posts
+// http.put('https://jsonplaceholder.typicode.com/posts/1', data, function(
+//   error,
+//   post
+// ) {
+//   if (error) {
+//     console.log(error);
+//   } else {
+//     console.log(post);
+//   }
+// });
+
+//Delete posts
