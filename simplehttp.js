@@ -25,11 +25,7 @@ easyHTTP.prototype.post = function(url, data, callBack) {
 
   let self = this;
   this.http.onload = function() {
-    if (self.http.status === 200) {
-      callBack(null, self.http.responseText);
-    } else {
-      callBack(`Error: ${self.http.status}`);
-    }
+    callBack(`Error: ${self.http.status}`);
   };
 
   this.send(JSON.stringify(data));
