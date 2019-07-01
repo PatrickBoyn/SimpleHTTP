@@ -19,4 +19,13 @@ const data = {
   body: 'This a custom post'
 };
 
-http.post('https://jsonplaceholder.typicode.com/posts', data, function() {});
+http.post('https://jsonplaceholder.typicode.com/posts', data, function(
+  error,
+  post
+) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log(post);
+  }
+});
