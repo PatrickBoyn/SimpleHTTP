@@ -38,6 +38,8 @@ simpleHTTP.put = function(url, data, callBack) {
   let self = this;
   this.http.onload = function() {
     callBack(null, self.http.responseText);
+
+    this.http.send(JSON.stringify(data));
   };
 };
 //HTTP Delete request
