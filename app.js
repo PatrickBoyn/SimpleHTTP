@@ -11,3 +11,9 @@ const http = new simpleHTTP();
 //     console.log(response);
 //   }
 // });
+
+// POST a new post (Confusing isn't it?)
+const data = {
+  title: 'Custom post',
+  body: 'This a custom post'
+};
