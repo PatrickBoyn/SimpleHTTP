@@ -24,7 +24,7 @@ http.post('https://jsonplaceholder.typicode.com/posts', data, function(
   post
 ) {
   if (error) {
-    console.error(error);
+    console.log(error);
   } else {
     console.log(post);
   }
