@@ -49,7 +49,7 @@ simpleHTTP.prototype.put = function(url, data, callBack) {
 simpleHTTP.prototype.delete = function(url, callBack) {
   this.http.open('DELETE', url, true);
   if (self.http.status === 200) {
-    callBack(null, self.http.responseText);
+    callBack(null, 'Post deleted.');
   } else {
     callBack(`Error: ${self.http.status}`);
   }
