@@ -23,6 +23,15 @@ easyHTTP.prototype.post = function(url, data, callBack) {
   this.http.open('POST', url, true);
   this.http.setRequestHeader('Content-type', 'application/json');
 
+  let self = this;
+  this.http.onload = function() {
+    if (self.http.status === 200) {
+      callBack(null, self.http.responseText);
+    } else {
+      callBack(`Error: ${self.http.status}`);
+    }
+  };
+
   this.send(JSON.stringify(data));
 };
 // HTTP PUT request
